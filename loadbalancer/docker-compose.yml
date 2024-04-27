@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  load_balancer:
+    build: .
+    ports:
+      - "5000:5000"
+    restart: always
+    depends_on:
+      - web_server1
+      - web_server2
+      - web_server3
+
+  web_server1:
+    image: webserver
+    container_name: Server1
+
+  web_server2:
+    image: webserver
+    container_name: Server2
+
+  web_server3:
+    image: webserver
+    container_name: Server3
+
