@@ -11,7 +11,7 @@ import csv
 import docker
 import os
 import socket
-
+#Maintainer:Derick Omuga 
 def get_replica(service_name):
     try:
         # Resolve the DNS entry for the service name
@@ -62,7 +62,7 @@ async def experiment_a1():
        #result  = re.match(pattern response).group()
       #except AttributeError:
        #   result  = re.match(pattern, response)
-           
+   #Maintainer:Derick Omuga         
       
       server=result[1]
       data3.append(str(server)+","+str(count2))
@@ -82,7 +82,7 @@ async def experiment_a1():
         #server_instance = response  # Assuming server instance is in the response
         #count[server_instance] = count.get(server_instance, 0) + 1
     # Save results to a file
-  
+  #Maintainer:Derick Omuga 
     #with open('experiment_a1_results.txt', 'w') as file:
         #for server, request_count in count.items():
            
