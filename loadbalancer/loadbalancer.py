@@ -14,7 +14,7 @@ import hashlib
 import bisect
 import random
 import re
-
+#Maintainer:Derick Omuga 
 
 app = Flask(__name__)
 def scale_service(service_name, replica_count):
@@ -90,7 +90,7 @@ class ConsistentHashing:
 
     def _get_server(self, request_key):
      if not self.sorted_hashes:
-        return None  # Or handle this case appropriately
+       print(f"None")  # Or handle this case appropriately
      hash_value = self._hash_function(request_key)
      idx = bisect.bisect_right(self.sorted_hashes, hash_value)
      if idx == len(self.sorted_hashes):
@@ -138,7 +138,7 @@ consistent_hashing = ConsistentHashing(N,num_slots=num_slots, num_virtual_nodes=
 # Example usage: Map request keys to servers
 
 # Parameters
-
+#Maintainer:Derick Omuga 
 
 # Initialize consistent hash ring
 
