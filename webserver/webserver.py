@@ -5,7 +5,7 @@ app = Flask(__name__)
 client = docker.from_env()
 container_id = os.getenv("HOSTNAME")
 container = client.containers.get(container_id)
-
+#Maintainer:Derick Omuga 
 
 server_id = container.name
 # Define /home endpoint
