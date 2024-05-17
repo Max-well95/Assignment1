@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 LABEL maintainer="Derick Omuga <derick.omuga@strathmore.edu>"
 # Set environment variables
-ENV SERVER_ID="web_client"
+ENV SERVER_ID="web_server"
 
 # Set the working directory in the container
 WORKDIR /app
@@ -20,5 +20,5 @@ COPY . .
 
 
 # Run the Flask application
-CMD ["python", "client.py"]
+CMD ["python", "webserver.py"]
 

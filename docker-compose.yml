@@ -11,6 +11,8 @@ services:
       replicas: 3
     volumes:
        - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      maintainer: "Derick Omuga <derick.omuga@strathmore.edu>"
  
   
 
@@ -27,6 +29,8 @@ services:
     privileged: true
     volumes:
        - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      maintainer: "Derick Omuga <derick.omuga@strathmore.edu>"   
   web_client:
     build: ./web_client
    
@@ -38,6 +42,8 @@ services:
     volumes:
        - /var/run/docker.sock:/var/run/docker.sock
        - ./web_client:/app
+    labels:
+      maintainer: "Derick Omuga <derick.omuga@strathmore.edu>"
    
   
     command:  python3 ./client.py

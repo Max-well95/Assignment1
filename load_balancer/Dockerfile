@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 LABEL maintainer="Derick Omuga <derick.omuga@strathmore.edu>"
 # Set environment variables
-ENV SERVER_ID="web_client"
+ENV SERVER_ID="load_balancer"
 
 # Set the working directory in the container
 WORKDIR /app
@@ -17,8 +17,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expose port 5000 to the outside world
-
+EXPOSE 5000
 
 # Run the Flask application
-CMD ["python", "client.py"]
+CMD ["python", "loadbalancer.py"]
 
