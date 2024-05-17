@@ -1,7 +1,13 @@
 from flask import Flask, jsonify
-
+import os
+import docker
 app = Flask(__name__)
+client = docker.from_env()
+container_id = os.getenv("HOSTNAME")
+container = client.containers.get(container_id)
 
+
+server_id = container.name
 # Define /home endpoint
 @app.route('/home', methods=['GET'])
 def home():
@@ -17,5 +23,5 @@ def heartbeat():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",port=5000)
+    app.run(host="0.0.0.0",port="8000")
 

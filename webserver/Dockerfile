@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # Set environment variables
-ENV SERVER_ID="Unknown"
+ENV SERVER_ID="web_server"
 
 # Set the working directory in the container
 WORKDIR /app
@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expose port 5000 to the outside world
-EXPOSE 5000
+
 
 # Run the Flask application
 CMD ["python", "webserver.py"]
