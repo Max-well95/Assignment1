@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # Set environment variables
-ENV SERVER_ID="Unknown"
+ENV SERVER_ID="load_balancer"
 
 # Set the working directory in the container
 WORKDIR /app
