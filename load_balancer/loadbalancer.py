@@ -39,10 +39,6 @@ def is_ipv4_address(string):
 
 
 
-
-
-
-
 class ConsistentHashing:
     def __init__(self,num_servers, num_slots, num_virtual_nodes, replication_factor):
         self.num_slots = num_slots
@@ -97,7 +93,6 @@ class ConsistentHashing:
         idx = 0
      return self.sorted_hashes[idx]
      
-
     def get_assigned_server(self, request_key):
       primary_hash = self._get_server(request_key)
       primary_idx = self.sorted_hashes.index(primary_hash)
@@ -120,9 +115,6 @@ class ConsistentHashing:
 
 
     
-
-    
-
 # Parameters
 num_slots = 512  # Total number of slots in the consistent hash map
 K = 9  # Number of virtual servers for each server container
@@ -141,8 +133,6 @@ consistent_hashing = ConsistentHashing(N,num_slots=num_slots, num_virtual_nodes=
 #Maintainer:Derick Omuga 
 
 # Initialize consistent hash ring
-
-
 
 hash_ring = consistent_hashing
 
